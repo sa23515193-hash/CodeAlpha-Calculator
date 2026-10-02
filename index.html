@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Scientific Calculator - CodeAlpha Frontend Development Internship Task 2">
+  <title>NovaCalc Pro | Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#"><span class="brand-mark">N</span><span>Nova<span>Calc</span></span></a>
+      <div class="top-actions">
+        <button id="angleMode" class="mode-btn" title="Switch angle mode">DEG</button>
+        <button id="historyToggle" class="icon-btn" title="Calculation history">◷</button>
+        <button id="themeToggle" class="icon-btn" title="Toggle theme">☼</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="calculator-wrap">
+        <div class="calculator">
+          <div class="calculator-heading">
+            <div>
+              <p class="eyebrow">CODEALPHA • TASK 2</p>
+              <h1>Scientific Calculator</h1>
+            </div>
+            <span class="status"><i></i> Ready</span>
+          </div>
+
+          <div class="display-card">
+            <div class="memory-line">
+              <span id="memoryIndicator">M</span>
+              <span id="angleIndicator">DEG</span>
+              <span id="displayStatus">Scientific mode</span>
+            </div>
+            <div id="expression" class="expression">&nbsp;</div>
+            <input id="display" class="display" value="0" readonly aria-label="Calculator display">
+            <div id="answerLine" class="answer-line">&nbsp;</div>
+          </div>
+
+          <div class="memory-row">
+            <button data-action="memory-clear">MC</button>
+            <button data-action="memory-recall">MR</button>
+            <button data-action="memory-plus">M+</button>
+            <button data-action="memory-minus">M−</button>
+            <button data-action="ans">Ans</button>
+          </div>
+
+          <div class="scientific-grid">
+            <button class="key function" data-value="sin(">sin</button>
+            <button class="key function" data-value="cos(">cos</button>
+            <button class="key function" data-value="tan(">tan</button>
+            <button class="key function" data-value="log(">log</button>
+            <button class="key function" data-value="ln(">ln</button>
+            <button class="key function" data-value="sqrt(">√</button>
+
+            <button class="key function" data-value="asin(">sin⁻¹</button>
+            <button class="key function" data-value="acos(">cos⁻¹</button>
+            <button class="key function" data-value="atan(">tan⁻¹</button>
+            <button class="key function" data-value="abs(">abs</button>
+            <button class="key function" data-value="exp(">eˣ</button>
+            <button class="key function" data-value="^">xʸ</button>
+
+            <button class="key function" data-value="π">π</button>
+            <button class="key function" data-value="e">e</button>
+            <button class="key function" data-value="!">x!</button>
+            <button class="key function" data-value="^2">x²</button>
+            <button class="key function" data-value="^3">x³</button>
+            <button class="key function" data-value="1/">1/x</button>
+          </div>
+
+          <div class="main-keys">
+            <button class="key utility" data-action="clear">AC</button>
+            <button class="key utility" data-action="delete">DEL</button>
+            <button class="key utility" data-action="percent">%</button>
+            <button class="key operator" data-value="÷">÷</button>
+
+            <button class="key" data-value="7">7</button>
+            <button class="key" data-value="8">8</button>
+            <button class="key" data-value="9">9</button>
+            <button class="key operator" data-value="×">×</button>
+
+            <button class="key" data-value="4">4</button>
+            <button class="key" data-value="5">5</button>
+            <button class="key" data-value="6">6</button>
+            <button class="key operator" data-value="−">−</button>
+
+            <button class="key" data-value="1">1</button>
+            <button class="key" data-value="2">2</button>
+            <button class="key" data-value="3">3</button>
+            <button class="key operator" data-value="+">+</button>
+
+            <button class="key utility" data-value="(">(</button>
+            <button class="key zero" data-value="0">0</button>
+            <button class="key utility" data-value=")">)</button>
+            <button class="key" data-value=".">.</button>
+
+            <button class="key equals" data-action="equals">=</button>
+          </div>
+
+          <div class="keyboard-hint">
+            <span>Keyboard supported</span>
+            <span>Enter = calculate</span>
+            <span>Esc = clear</span>
+            <span>Backspace = delete</span>
+          </div>
+        </div>
+      </section>
+
+      <aside id="historyPanel" class="history-panel">
+        <div class="history-header">
+          <div>
+            <p class="eyebrow">CALCULATIONS</p>
+            <h2>History</h2>
+          </div>
+          <button id="clearHistory" class="clear-history">Clear</button>
+        </div>
+        <div id="historyList" class="history-list">
+          <div class="empty-history">
+            <span>◷</span>
+            <p>No calculations yet</p>
+            <small>Your recent calculations will appear here.</small>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <span>CodeAlpha Frontend Development Internship • Task 2</span>
+      <span>HTML • CSS • JavaScript</span>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
